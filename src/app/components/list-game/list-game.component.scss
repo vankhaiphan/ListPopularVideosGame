@@ -2,8 +2,8 @@
   display: flex;
 }
 
-.info > p, span {
-  font-size: 25px;
+.image {
+  width: 50%;
 }
 
 .info {
@@ -11,6 +11,8 @@
   text-align: left;
 }
 
-.image {
-  width: 50%;
+.info > p, span {
+  font-size: 25px;
 }
+
+
