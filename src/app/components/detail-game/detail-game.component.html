@@ -1,0 +1,41 @@
+<div class="row justify-content-xl-center">
+  <div class="jumbotron">
+    <h1 class="display-2">{{content.name}}</h1>
+    <img class="image" src="{{content.background_image}}">
+    <div class="game_about">
+      <h1 class="display-5">About</h1>
+      <div class="description" [innerHTML]="content.description"></div>
+    </div>
+    <div class="game_info">
+      <div class="game_rating">
+        <h1 class="display-5">Rating</h1>
+        <span>{{content.rating}} </span>
+      </div>
+      <div class="game_platforms">
+        <h1 class="display-5">Platform</h1>
+        <span *ngFor="let platform of content.platforms">{{platform.platform.name}} </span>
+      </div>
+      <div class="game_genre">
+        <h1 class="display-5">Genre</h1>
+        <span *ngFor="let genre of content.genres">{{genre.name}} </span>
+      </div>
+      <div class="game_release">
+        <h1 class="display-5">Release date</h1>
+        <span>{{content.released}} </span>
+      </div>
+      <div class="game_dev">
+        <h1 class="display-5">Developer</h1>
+        <span *ngFor="let developer of content.developers">{{developer.name}} </span>
+      </div>
+      <div class="game_pub">
+        <h1 class="display-5">Publisher</h1>
+        <span *ngFor="let publisher of content.publishers">{{publisher.name}} </span>
+      </div>
+    </div>
+    <a href="/">[Main Page]</a>
+  </div>
+</div>
+
+
+
+

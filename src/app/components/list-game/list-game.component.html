@@ -1,0 +1,50 @@
+<!--<div id="#game-body">-->
+<!--  <div class="background">-->
+<!--    <div class="card m-3">-->
+<!--      <h3 class="card-header text-center">Popular in 2020</h3>-->
+<!--      <div class="card-body">-->
+<!--        <div *ngFor="let item of pageOfItems" (click)="showDetailGame(item.id)">-->
+<!--          <div class="game">-->
+<!--            <img class="image" src="{{item.background_image}}" />-->
+<!--            <div class="info">-->
+<!--              <h3 class="title">{{item.name}}</h3>-->
+<!--              <p> Released day: {{item.released}}</p>-->
+<!--              <p>Rating: {{item.rating}}</p>-->
+<!--              <span class="tags">Genres: </span>-->
+<!--              <span *ngFor="let genre of item.genres">{{genre.name}} </span>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <hr>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="card-footer pb-0 pt-3">-->
+<!--        <jw-pagination [pageSize]="5" [items]="items" (changePage)="onChangePage($event)"></jw-pagination>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<div class="card text-center m-3">
+  <h3 class="card-header display-4">Popular in 2020</h3>
+  <div class="card-body">
+    <div *ngFor="let item of pageOfItems" (click)="showDetailGame(item.id)">
+      <div class="game">
+        <img class="image" src="{{item.background_image}}" />
+        <div class="info">
+          <h3 class="display-4">{{item.name}}</h3>
+          <p class="display-6"> Rating: {{item.rating}}</p>
+          <p class="display-6"> Release date: {{item.released}}</p>
+          <span class="display-6">Genres: </span>
+          <span *ngFor="let genre of item.genres">{{genre.name}} </span>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </div>
+  <div class="card-footer pb-0 pt-3 pagi">
+    <jw-pagination [pageSize]="5" [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
+  </div>
+</div>
+
+
+
+
